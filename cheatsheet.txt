@@ -1,0 +1,22 @@
+setup
+
+create a new rails project excluding the test 
+rails new stock-trading-app -T
+
+add devise and rspec-rails to gem file and install `bundle install`
+
+setup rspec
+`rails generate rspec:install`
+
+setup devise
+rails generate devise:install
+rails generate devise User
+rails db:migrate
+
+generate user scaffold:
+rails generate scaffold_controller User name:string email:string role:string
+
+
+creating my first test using rspec
+create tests in spec/models/user_spec.rb
+run test bundle exec rspec
